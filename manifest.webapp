@@ -1,5 +1,6 @@
 {
-  "name": "Elegant Soundbox",
+  "name": "Whipe",
+  "orientation": "portrait-primary",
   "description": "Shake your phone to make whipe sound.",
   "launch_path": "/index.html",
   "developer": {
@@ -7,7 +8,9 @@
     "url": "https://github.com/NinjaTrappeur"
   },
   "icons": {
-    "128": "/images/icon-128.png",
-    "60": "/images/icon-60.png"
+    "60": "/images/icon-60.png",
+    "90": "/images/icon-90.png",
+    "120": "/images/icon-120.png",
+    "128": "/images/icon-128.png"
   }
 }

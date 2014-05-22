@@ -1,4 +1,4 @@
-var previousAngle = -1, soundManager, playing = false;
+var previousAngle = -1, previousTime = -1, soundManager, playing = false, main;
 
 
 var SoundManager = function () {
@@ -17,18 +17,20 @@ SoundManager.prototype.playWhipe = function () {
 
 var main = function () {
     "use strict";
-    if (!screen.mozLockOrientation("portrait-primary")) {
-        console.log("Impossible to set the display orientation to portrait." +
-            "Are you using firefox?");
-    }
     soundManager = new SoundManager();
     window.addEventListener('deviceorientation', function (event) {
+        var speed = Math.abs(event.alpha - previousAngle) * (new Date().getTime() - previousTime);
         if (previousAngle === -1) {
             previousAngle = event.alpha;
+            previousTime = new Date().getTime();
+            speed = 0;
         }
-        if (Math.abs(event.alpha - previousAngle) > 20) {
+        if (speed > 10000) {
             soundManager.playWhipe();
         }
         previousAngle = event.alpha;
+        previousTime = new Date().getTime();
     }, false);
 };
+
+window.onload = main;
