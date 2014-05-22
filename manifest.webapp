@@ -1,0 +1,12 @@
+{
+  "name": "Elegant Soundbox",
+  "description": "Shake your phone to make whipe sound.",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/images/icon-128.png"
+  },
+  "developer": {
+    "name": "Félix Baylac-Jacqué",
+    "url": "https://github.com/NinjaTrappeur"
+  }
+}
