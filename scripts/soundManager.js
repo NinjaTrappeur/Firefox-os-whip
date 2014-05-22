@@ -28,6 +28,7 @@ var main = function () {
         if (speed > 10000) {
             soundManager.playWhipe();
         }
+        
         previousAngle = event.alpha;
         previousTime = new Date().getTime();
     }, false);
